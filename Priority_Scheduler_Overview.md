@@ -29,6 +29,8 @@ flowchart TD
 | Low | 22 | Battery level at 87% |
 | Informational | 15 | Routine maintenance scheduled |
 
+![Priority-policy reference showing urgent, high, and routine message examples alongside their recommended handling.](media/image4.png)
+
 ## Implementation
 
 - **Language:** Python 3.10+; standard library only (no external packages or LLM).

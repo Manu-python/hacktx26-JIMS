@@ -6,7 +6,7 @@ We built a one-way optical text communication prototype using an Arduino transmi
 
 Our broader objective is to combine optical transport with a decision algorithm that chooses which information should be sent, compressed, or stored according to urgency, importance, and value. The longer-term application is communication between future space computing systems and Earth. The present result is a tabletop proof of concept; it is not a demonstration of an orbital data center or a measured improvement over Wi-Fi.
 
-![System diagram: Transmitter (message input, Arduino binary encoder, laser module on/off states) sends light across a free-space optical path to the Receiver (photoresistor and input circuit, ESP32 bit and text decoder, LCD received message)](images/system-diagram.png)
+![System diagram: message input flows through an Arduino binary encoder and laser transmitter, across a free-space optical path, to a photoresistor, ESP32 decoder, and LCD receiver.](media/image2.png)
 
 | Subsystem | Role in the prototype |
 |---|---|
@@ -27,6 +27,8 @@ Binary encoding represents a message as a sequence of zeros and ones. On-off key
 |---|---|---|
 | 1 | Laser on during the bit interval | Illuminated state |
 | 0 | Laser off during the bit interval | Dark state |
+
+![Logical OOK bit mapping: a logical 1 corresponds to the laser being on during its bit interval, and a logical 0 corresponds to the laser being off.](media/image3.png)
 
 For example, in an eight-bit ASCII representation, the letter A is `01000001`. This is an illustration of bit representation, not a claim about the exact character format in the current firmware. Binary encoding is not compression: representing a character as bits does not, by itself, reduce the information that must be transmitted.
 
@@ -73,6 +75,8 @@ The decision layer should receive the original message, its arrival time, source
 | High | Degraded communication, unauthorized access, reduced cooling | Send promptly after urgent traffic; retain context and operational status. |
 | Routine | Normal readings, completed checks, scheduled work | Queue, batch, or store until an appropriate transmission opportunity. |
 
+![Proposed priority policy showing urgent, high, and routine examples with their default handling.](media/image4.png)
+
 These categories form a proposed evaluation policy for the 30 example messages in the appendix. They are human-assigned reference labels, not outputs of a tested AI model. Actual urgency depends on operating context; an apparently routine battery or temperature reading can become urgent if it crosses a system-specific limit.
 
 ### How AI can support the decision
@@ -103,6 +107,8 @@ For a future request-driven implementation, define an explicit command such as `
 | Corrupted or incomplete frame | Reject or flag the frame; retain the source data for recovery. |
 | Confirmed delivery | Mark the message delivered and apply the retention policy. |
 
+![Recommended application behavior for valid zeros, active requests, expired sessions, corrupted frames, and confirmed delivery.](media/image5.png)
+
 ### The current hardware path is one way
 
 The demonstrated direction is Arduino to ESP32. The LCD confirms local reception for a person watching it; it does not provide an acknowledgment to the Arduino. If the Arduino represents a satellite transmitter and the ESP32 represents Earth, a ground request cannot travel backward through this one-way arrangement. A reverse optical channel or a separate control link is required for requests, acknowledgments, and automatic retransmission.
@@ -125,6 +131,8 @@ The achieved hardware result is end-to-end optical text delivery: an Arduino gen
 | Bit errors and exact-message success rate | Require repeated trials and transmit/receive logs. |
 | Priority classification and urgent-message delay | Require reference labels and decision/queue logs. |
 | Compression savings and inference overhead | Require encoded-size, fidelity, timing, and resource measurements. |
+
+![Current evaluation-status matrix showing demonstrated optical text transmission and the measurements still needed for throughput, reliability, and priority evaluation.](media/image6.png)
 
 ### Example message set
 
@@ -205,6 +213,10 @@ The priority column is a proposed human reference for evaluating the decision al
 | 30 | All monitoring systems functioning normally. | Routine |
 
 **Urgent** indicates an explicit immediate hazard or emergency response. **High** indicates degraded operation or a security/communication event that should be handled promptly. **Routine** indicates a normal reading, completed task, or scheduled activity without an explicit immediate hazard. Actual mission context can change these labels.
+
+![Visual reference-label table, part 1, covering example messages 1 through 14.](media/image7.png)
+
+![Visual reference-label table, part 2, covering example messages 16 through 30. The Markdown table above remains the complete source of record, including message 15.](media/image8.png)
 
 **Proposed label totals:** 9 urgent, 6 high, and 15 routine messages. For example, a rise of 2 C or a battery level of 87% is not automatically an emergency without an operating limit. A primary-link disconnection describes a communication fault, but transmitting its report may itself require storage or a separate functioning link.
 
