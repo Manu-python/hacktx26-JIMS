@@ -1,0 +1,272 @@
+[
+  {
+    "rank": 1,
+    "id": "M02",
+    "text": "Fire detected in Sector B. Immediate response required.",
+    "priority": 96,
+    "category": "EMERGENCY",
+    "reason": "Danger to people",
+    "arrival_order": 2
+  },
+  {
+    "rank": 2,
+    "id": "M08",
+    "text": "Oxygen levels dropping below safe limits.",
+    "priority": 96,
+    "category": "EMERGENCY",
+    "reason": "Danger to people",
+    "arrival_order": 8
+  },
+  {
+    "rank": 3,
+    "id": "M10",
+    "text": "Worker injured in Sector A. Medical assistance needed.",
+    "priority": 96,
+    "category": "EMERGENCY",
+    "reason": "Danger to people",
+    "arrival_order": 10
+  },
+  {
+    "rank": 4,
+    "id": "M20",
+    "text": "Emergency evacuation ordered for all personnel.",
+    "priority": 96,
+    "category": "EMERGENCY",
+    "reason": "Danger to people",
+    "arrival_order": 20
+  },
+  {
+    "rank": 5,
+    "id": "M23",
+    "text": "Radiation levels exceeding safety thresholds.",
+    "priority": 96,
+    "category": "EMERGENCY",
+    "reason": "Danger to people",
+    "arrival_order": 23
+  },
+  {
+    "rank": 6,
+    "id": "M26",
+    "text": "Water contamination detected in drinking supply.",
+    "priority": 96,
+    "category": "EMERGENCY",
+    "reason": "Danger to people",
+    "arrival_order": 26
+  },
+  {
+    "rank": 7,
+    "id": "M05",
+    "text": "Emergency shutdown requested for Reactor 2.",
+    "priority": 89,
+    "category": "CRITICAL",
+    "reason": "Critical infrastructure event",
+    "arrival_order": 5
+  },
+  {
+    "rank": 8,
+    "id": "M12",
+    "text": "Main power supply failure detected.",
+    "priority": 89,
+    "category": "CRITICAL",
+    "reason": "Critical infrastructure event",
+    "arrival_order": 12
+  },
+  {
+    "rank": 9,
+    "id": "M15",
+    "text": "Critical coolant leak detected in the main generator.",
+    "priority": 89,
+    "category": "CRITICAL",
+    "reason": "Critical infrastructure event",
+    "arrival_order": 15
+  },
+  {
+    "rank": 10,
+    "id": "M29",
+    "text": "Primary communication link disconnected.",
+    "priority": 89,
+    "category": "CRITICAL",
+    "reason": "Critical infrastructure event",
+    "arrival_order": 29
+  },
+  {
+    "rank": 11,
+    "id": "M14",
+    "text": "Backup communication system activated.",
+    "priority": 72,
+    "category": "HIGH",
+    "reason": "Security or backup system event",
+    "arrival_order": 14
+  },
+  {
+    "rank": 12,
+    "id": "M17",
+    "text": "Unauthorized access detected in Control Room 3.",
+    "priority": 72,
+    "category": "HIGH",
+    "reason": "Security or backup system event",
+    "arrival_order": 17
+  },
+  {
+    "rank": 13,
+    "id": "M09",
+    "text": "Solar panel efficiency decreased by 3%.",
+    "priority": 55,
+    "category": "MEDIUM",
+    "reason": "Degraded performance",
+    "arrival_order": 9
+  },
+  {
+    "rank": 14,
+    "id": "M21",
+    "text": "Network latency increased to 250 ms.",
+    "priority": 55,
+    "category": "MEDIUM",
+    "reason": "Degraded performance",
+    "arrival_order": 21
+  },
+  {
+    "rank": 15,
+    "id": "M22",
+    "text": "Storage capacity is 72% full.",
+    "priority": 55,
+    "category": "MEDIUM",
+    "reason": "Degraded performance",
+    "arrival_order": 22
+  },
+  {
+    "rank": 16,
+    "id": "M28",
+    "text": "Cooling fan 2 operating at reduced efficiency.",
+    "priority": 55,
+    "category": "MEDIUM",
+    "reason": "Degraded performance",
+    "arrival_order": 28
+  },
+  {
+    "rank": 17,
+    "id": "M01",
+    "text": "Temperature sensor reports 24.5 C.",
+    "priority": 22,
+    "category": "LOW",
+    "reason": "Routine telemetry",
+    "arrival_order": 1
+  },
+  {
+    "rank": 18,
+    "id": "M03",
+    "text": "Battery level at 87%.",
+    "priority": 22,
+    "category": "LOW",
+    "reason": "Routine telemetry",
+    "arrival_order": 3
+  },
+  {
+    "rank": 19,
+    "id": "M06",
+    "text": "Atmospheric pressure measured at 101.3 kPa.",
+    "priority": 22,
+    "category": "LOW",
+    "reason": "Routine telemetry",
+    "arrival_order": 6
+  },
+  {
+    "rank": 20,
+    "id": "M13",
+    "text": "Humidity sensor reports 45%.",
+    "priority": 22,
+    "category": "LOW",
+    "reason": "Routine telemetry",
+    "arrival_order": 13
+  },
+  {
+    "rank": 21,
+    "id": "M19",
+    "text": "External temperature increased by 2 C.",
+    "priority": 22,
+    "category": "LOW",
+    "reason": "Routine telemetry",
+    "arrival_order": 19
+  },
+  {
+    "rank": 22,
+    "id": "M25",
+    "text": "Backup generator fuel level at 65%.",
+    "priority": 22,
+    "category": "LOW",
+    "reason": "Routine telemetry",
+    "arrival_order": 25
+  },
+  {
+    "rank": 23,
+    "id": "M04",
+    "text": "System diagnostics completed successfully.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 4
+  },
+  {
+    "rank": 24,
+    "id": "M07",
+    "text": "Communication link operating normally.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 7
+  },
+  {
+    "rank": 25,
+    "id": "M11",
+    "text": "Routine maintenance scheduled for tomorrow.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 11
+  },
+  {
+    "rank": 26,
+    "id": "M16",
+    "text": "Data backup completed successfully.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 16
+  },
+  {
+    "rank": 27,
+    "id": "M18",
+    "text": "Sensor calibration completed.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 18
+  },
+  {
+    "rank": 28,
+    "id": "M24",
+    "text": "Software update available for monitoring system.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 24
+  },
+  {
+    "rank": 29,
+    "id": "M27",
+    "text": "Routine status report requested.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 27
+  },
+  {
+    "rank": 30,
+    "id": "M30",
+    "text": "All monitoring systems functioning normally.",
+    "priority": 15,
+    "category": "INFO",
+    "reason": "Normal or scheduled activity",
+    "arrival_order": 30
+  }
+]
